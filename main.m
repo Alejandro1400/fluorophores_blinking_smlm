@@ -9,11 +9,11 @@ clc, clear all
 
 %% Folder Workspace access
 
-% Add folder and subfolders to path
-addpath(genpath(folder));
-
 % Get current folder
 folder = fileparts(which(mfilename)); 
+
+% Add folder and subfolders to path
+addpath(genpath(folder));
 
 % Call the preprocess_image function
 preprocess_image(folder);

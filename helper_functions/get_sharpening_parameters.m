@@ -9,7 +9,7 @@ function [radius, amount, threshold] = get_sharpening_parameters()
 %  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    disp('When selecting the parameters use a double format X.X, also on each parameter is shown the expected range to use')
+    disp('    When selecting the parameters use a double format X.X, also on each parameter is shown the expected range to use')
     % Default values
     defaultRadius = 1;
     defaultAmount = 0;

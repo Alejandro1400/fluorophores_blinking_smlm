@@ -70,9 +70,8 @@ function preprocess_image(folder)
         end
 
         if applySharpness
-            disp('    1.2. Your image adjustment options have been saved and are being applied to other images.');
-
             [radius, amount, threshold] = get_sharpening_parameters();
+            disp('    1.2. Sharpness selection and contrast adjustment have been selected and are going to be applied.');
         end
 
         % Apply contrast settings from the first frame to all frames
@@ -94,7 +93,7 @@ function preprocess_image(folder)
         end
 
         if saveTiff
-            disp('    1.4. Starting the saving of the adjusted frames...')
+            disp('    1.3. Starting the saving of the adjusted frames...')
 
             % Call function to create output directory and filename for the processed image
             [outputDir, fileNameOutput] = create_output_directory(folder, fileName);
@@ -114,7 +113,7 @@ function preprocess_image(folder)
         end
 
         if showVideo
-            disp('    1.5. A video will display the processed frames, to stop it just press X');
+            disp('    1.4. A video will display the processed frames, to stop it just press X');
 
             % Create a figure to display the frames
             hFig = figure;
