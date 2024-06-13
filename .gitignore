@@ -1,0 +1,6 @@
+# Ignore all .asv files in any directory
+*.asv
+
+# Ignore everything in the input_data and output_data directory
+input_data/
+output_data/
