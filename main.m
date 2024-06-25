@@ -1,5 +1,5 @@
 %% Script - Main Fluorophores Blinking SMLM
-
+%
 % author:  Alejandro Salgado
 % date:    06.10.2024
 % version: 1.0
@@ -16,5 +16,5 @@ folder = fileparts(which(mfilename));
 addpath(genpath(folder));
 
 % Call the preprocess_image function
-preprocess_image(folder);
+preprocess_image_gui(folder);
 
