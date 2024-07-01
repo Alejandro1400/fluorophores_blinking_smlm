@@ -13,7 +13,7 @@ function preprocess_image_gui(folder)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % Create a figure for the GUI
-    fig = uifigure('Name', 'Image Preprocessing for STORM', 'Position', [100 100 600 500]);
+    fig = uifigure('Name', 'Image Preprocessing for STORM', 'Position', [100 100 600 500], 'Resize', 'off');
 
     % Add title
     lblTitle = uilabel(fig, 'Position', [200 470 200 22], 'Text', 'Image Preprocessing', 'FontSize', 16, 'FontWeight', 'bold');
@@ -276,6 +276,10 @@ function preprocess_image_gui(folder)
     
         % Define the output file path
         tiffFileName = fullfile(outputDir, ['adjusted_', fileNameOutput, '.tif']);
+        adjustmentsFileName = fullfile(outputDir, ['adjustments_', fileNameOutput, '.mat']);  % MAT file for adjustments
+
+        % Save the adjustments data to a MAT file
+        save(adjustmentsFileName, 'imageAdjustments');
     
         % Create and show the progress bar
         progressBar = uiprogressdlg(fig, 'Title', 'Saving Adjusted TIFF', 'Message', 'Saving adjusted frames to TIFF...', 'Indeterminate', 'off', 'Value', 0);
