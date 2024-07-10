@@ -17,7 +17,7 @@ folder = fileparts(which(mfilename));
 addpath(genpath(folder));
 
 % Call the preprocess_image function
-%preprocess_image_gui(folder);
+% preprocess_image_gui(folder);
 
 % Call the image_reconstruction function
 image_reconstruction_gui(folder);
